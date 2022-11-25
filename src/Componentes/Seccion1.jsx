@@ -14,7 +14,7 @@ const handleClose = () => setShow(false);
 const handleShow = () => setShow(true);
 
 const handleUpdate=()=>{
-   let ps = clientes.filter(p=>p.id!==cliente.id)
+   let ps = clientes.filter(p=>p.id!==cliente.id)  // si se hace con el rut , se mantiene y se agrega otro , almenos que haya mantenido el rut , se elimina el resto 
    setClientes([...ps,cliente])
    console.log(clientes)
 } 

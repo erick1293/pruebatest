@@ -9,6 +9,7 @@ import { Seccion3 } from "./Componentes/Seccion3";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "react-bootstrap/Nav";
 import "./assets/comp.css";
+import { Seccion4 } from "./Componentes/Seccion4";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/seccion2" element={<Seccion2 />} />
           <Route path="/seccion3" element={<Seccion3 />} />
+          <Route path="/seccion4" element={<Seccion4 />} />
         </Routes>
         <Footer />
       </BrowserRouter>
