@@ -31,6 +31,10 @@ export const Header = () => {
           <NavLink to="/seccion3">Registrar Bancos</NavLink>
         </Nav.Link>
       </Nav.Item>
+       <Nav.Link>
+          <NavLink to="/seccion4">Test General</NavLink>
+        </Nav.Link>
+      
     
 
 </Nav>

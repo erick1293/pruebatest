@@ -22,7 +22,7 @@ export const Seccion4 = () => {
     const handleShow = () => setShow(true);
     
 
-
+    
 
     const modificarCLientes = (id,rut,nombre,apellido,edad,email,telefono,direccion)=>{
         setAccion(false)
@@ -39,17 +39,7 @@ export const Seccion4 = () => {
           handleShow()
       }
 
-      const handleUpdateCliente=()=>{
-        let ps = clientes.filter(p=>p.id!==cliente.id)  // si se hace con el rut , se mantiene y se agrega otro , almenos que haya mantenido el rut , se elimina el resto 
-        setClientes([...ps,cliente])
-        console.log(clientes)
-     } 
-     
-     const handleDeleteCliente = ()=>{
-       let ps = clientes.filter(p=>p. id!==cliente.id)
-       setClientes([...ps])
-       
-     }
+   
 
 
     const modificarTrabajador = (id,rut,nombre,apellido,sexo,edad,email,telefono,direccion)=>{
@@ -68,19 +58,7 @@ export const Seccion4 = () => {
           handleShow()
           
       }
-      const handleUpdate = ()=>{
-        let ps = trabajadores.filter(p=>p.id!==trabajador.id)
-        setTrabajadores([...ps,trabajador])
-        console.log(trabajadores)
-      }
-      const handleDelete = ()=>{
-        let ps = trabajadores.filter(p=>p.id!==trabajador.id)
-        setTrabajadores([...ps])
-        
-      }
-
-
-    const modificarBancos =(id,nombre,empresa,trabajador,cliente)=>{
+      const modificarBancos =(id,nombre,empresa,trabajador,cliente)=>{
         setAccion(false)
         setBanco({
           'id':id,
@@ -92,6 +70,29 @@ export const Seccion4 = () => {
         })
         handleShow()
       }
+      const handleUpdate = ()=>{
+        let ps = trabajadores.filter(p=>p.id!==trabajador.id)
+        setTrabajadores([...ps,trabajador])
+        console.log(trabajadores)
+      }
+      const handleDelete = ()=>{
+        let ps = trabajadores.filter(p=>p.id!==trabajador.id)
+        setTrabajadores([...ps])
+        
+      }
+
+      const handleUpdateCliente=()=>{
+        let ps = clientes.filter(p=>p.id!==cliente.id)  // si se hace con el rut , se mantiene y se agrega otro , almenos que haya mantenido el rut , se elimina el resto 
+        setClientes([...ps,cliente])
+        console.log(clientes)
+     } 
+     
+     const handleDeleteCliente = ()=>{
+       let ps = clientes.filter(p=>p. id!==cliente.id)
+       setClientes([...ps])
+       
+     }
+   
       
       const handleUpdateBanco = () =>{
       let bn = bancos.filter(p=>p.id !== banco.id)
