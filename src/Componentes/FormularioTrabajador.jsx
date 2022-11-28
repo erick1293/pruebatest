@@ -26,6 +26,8 @@ export const FormularioTrabajador = (props) => {
     const [email, setEmail] = useState(props.trabajador.email)
     const [direccion, setDireccion] = useState(props.trabajador.direccion)
 
+
+
     const handleRegistro = () => {
         props.setTrabajadores([...props.trabajadores, {
             'id': uuid(),
@@ -62,13 +64,13 @@ export const FormularioTrabajador = (props) => {
             </Form.Group>
 
             <Form.Group>
-                {/*<Form.Label >Sexo: </Form.Label>*/}
-                <Form.Control  type="hidden" name="sexo" placeholder="Ingrese su sexo" onChange={(e) => { setSexo(e.target.value); handleUpdate(e.target.name, e.target.value) }} value={sexo} />
+                <Form.Label >Sexo: </Form.Label>
+                <Form.Control   name="sexo" placeholder="Ingrese su sexo" onChange={(e) => { setSexo(e.target.value); handleUpdate(e.target.name, e.target.value) }} value={sexo} />
             </Form.Group>
 
             <Form.Group>
                 <Form.Label>Sexo: </Form.Label>
-                <Form.Control as='select'  onChange={(e) => { setSexo(e.target.value); handleUpdate(e.target.name, e.target.value) }} value={sexo} >
+                <Form.Control as='select'  onChange={(e) => { setSexo(e.target.value); handleUpdate(e.target.name, e.target.value)  }} value={sexo} >
                 <option   value={sexo}>Seleccione un Sexo</option>
                 <option   value={sexo}>Masculino</option>
                 <option   value={sexo}> Femenino</option>
@@ -77,8 +79,7 @@ export const FormularioTrabajador = (props) => {
                 
             </Form.Group>
 
-      {/*  <CreatableSelect isClearable options={optiona} />;*/}
-
+            
 
             <Form.Group>
                 <Form.Label>Edad: </Form.Label>

@@ -41,7 +41,7 @@ export const Seccion2 = () => {
         handleShow()
         
     }
-    
+
     const eliminar = ()=>{
       setAccion(true)
       handleShow()

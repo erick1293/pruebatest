@@ -22,8 +22,6 @@ export const Seccion4 = () => {
     const handleShow = () => setShow(true);
     
 
-    
-
     const modificarCLientes = (id,rut,nombre,apellido,edad,email,telefono,direccion)=>{
         setAccion(false)
          setCliente({
@@ -81,6 +79,7 @@ export const Seccion4 = () => {
         
       }
 
+
       const handleUpdateCliente=()=>{
         let ps = clientes.filter(p=>p.id!==cliente.id)  // si se hace con el rut , se mantiene y se agrega otro , almenos que haya mantenido el rut , se elimina el resto 
         setClientes([...ps,cliente])
@@ -92,6 +91,7 @@ export const Seccion4 = () => {
        setClientes([...ps])
        
      }
+
    
       
       const handleUpdateBanco = () =>{
